@@ -1,55 +1,67 @@
-// ================================
-// Prova / Toluwase Portfolio
-// Main JavaScript
-// ================================
+/* =========================================
+   ESAN TOLUWASE VICTOR
+   PORTFOLIO JAVASCRIPT
+   ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // -------------------------------
-  // Mobile Navigation
-  // -------------------------------
+  /* =========================================
+     MOBILE MENU
+     ========================================= */
 
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("nav");
 
-  if (navToggle && navLinks) {
+  if (menuToggle && nav) {
 
-    navToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      navToggle.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      menuToggle.classList.toggle("active");
     });
 
-    // Close menu when a link is clicked
-    const links = navLinks.querySelectorAll("a");
+    nav.querySelectorAll("a").forEach(link => {
 
-    links.forEach(link => {
       link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        navToggle.classList.remove("active");
+        nav.classList.remove("open");
+        menuToggle.classList.remove("active");
       });
+
     });
+
   }
 
 
-  // -------------------------------
-  // Dynamic Copyright Year
-  // -------------------------------
+  /* =========================================
+     HEADER SCROLL EFFECT
+     ========================================= */
 
-  const yearElement = document.getElementById("year");
+  const header = document.getElementById("header");
 
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  function handleHeader() {
+
+    if (!header) return;
+
+    if (window.scrollY > 30) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+
   }
 
+  window.addEventListener("scroll", handleHeader);
 
-  // -------------------------------
-  // Scroll Reveal Animation
-  // -------------------------------
+  handleHeader();
+
+
+  /* =========================================
+     SCROLL REVEAL
+     ========================================= */
 
   const revealElements = document.querySelectorAll(".reveal");
 
   const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
+    entries => {
 
       entries.forEach(entry => {
 
@@ -57,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           entry.target.classList.add("visible");
 
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
+
         }
 
       });
@@ -74,53 +87,108 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // -------------------------------
-  // Header Shadow on Scroll
-  // -------------------------------
+  /* =========================================
+     ACTIVE NAVIGATION
+     ========================================= */
 
-  const header = document.querySelector(".site-header");
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav a");
 
-  if (header) {
+  const sectionObserver = new IntersectionObserver(
+    entries => {
 
-    const handleScroll = () => {
+      entries.forEach(entry => {
 
-      if (window.scrollY > 30) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
+        if (!entry.isIntersecting) return;
 
-    };
+        const currentId = entry.target.getAttribute("id");
 
-    window.addEventListener("scroll", handleScroll);
+        navLinks.forEach(link => {
 
-    handleScroll();
+          link.classList.remove("active");
+
+          if (
+            link.getAttribute("href") ===
+            `#${currentId}`
+          ) {
+
+            link.classList.add("active");
+
+          }
+
+        });
+
+      });
+
+    },
+    {
+      rootMargin: "-35% 0px -55% 0px"
+    }
+  );
+
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+
+  /* =========================================
+     BACK TO TOP
+     ========================================= */
+
+  const backTop = document.getElementById("backTop");
+
+  function handleBackTop() {
+
+    if (!backTop) return;
+
+    if (window.scrollY > 600) {
+      backTop.classList.add("show");
+    } else {
+      backTop.classList.remove("show");
+    }
+
+  }
+
+  window.addEventListener("scroll", handleBackTop);
+
+  handleBackTop();
+
+
+  if (backTop) {
+
+    backTop.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
   }
 
 
-  // -------------------------------
-  // Smooth Scrolling
-  // -------------------------------
+  /* =========================================
+     SMOOTH INTERNAL LINKS
+     ========================================= */
 
-  const internalLinks = document.querySelectorAll(
-    'a[href^="#"]'
-  );
-
-  internalLinks.forEach(link => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.addEventListener("click", event => {
 
       const targetId = link.getAttribute("href");
 
-      if (!targetId || targetId === "#") {
+      if (
+        !targetId ||
+        targetId === "#"
+      ) {
         return;
       }
 
       const target = document.querySelector(targetId);
 
-      if (!target) {
-        return;
-      }
+      if (!target) return;
 
       event.preventDefault();
 
@@ -134,60 +202,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // -------------------------------
-  // Active Navigation Link
-  // -------------------------------
+  /* =========================================
+     CURRENT YEAR
+     ========================================= */
 
-  const sections = document.querySelectorAll("section[id]");
-  const navigationLinks = document.querySelectorAll(
-    '.nav-links a[href^="#"]'
-  );
+  const year = document.getElementById("year");
 
-  const sectionObserver = new IntersectionObserver(
-    entries => {
-
-      entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-          const id = entry.target.getAttribute("id");
-
-          navigationLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (link.getAttribute("href") === `#${id}`) {
-              link.classList.add("active");
-            }
-
-          });
-
-        }
-
-      });
-
-    },
-    {
-      rootMargin: "-35% 0px -55% 0px",
-      threshold: 0
-    }
-  );
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
 
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
+  /* =========================================
+     EXTERNAL LINKS
+     ========================================= */
 
-
-  // -------------------------------
-  // External Links
-  // -------------------------------
-
-  const externalLinks = document.querySelectorAll(
+  document.querySelectorAll(
     'a[target="_blank"]'
-  );
-
-  externalLinks.forEach(link => {
+  ).forEach(link => {
 
     link.setAttribute(
       "rel",
@@ -197,39 +229,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // -------------------------------
-  // Prevent Empty Placeholder Links
-  // -------------------------------
+  /* =========================================
+     SIMPLE MOUSE PARALLAX FOR HERO
+     ========================================= */
 
-  const placeholderLinks = document.querySelectorAll(
-    'a[href="YOUR_LINKEDIN_URL"], a[href="YOUR_GITHUB_URL"]'
-  );
+  const heroVisual =
+    document.querySelector(".hero-visual");
 
-  placeholderLinks.forEach(link => {
+  if (
+    heroVisual &&
+    window.matchMedia("(min-width: 1000px)").matches
+  ) {
 
-    link.addEventListener("click", event => {
+    document.addEventListener("mousemove", event => {
 
-      event.preventDefault();
+      const x =
+        (window.innerWidth / 2 - event.clientX) / 70;
 
-      alert(
-        "Please update this link with your actual profile URL."
-      );
+      const y =
+        (window.innerHeight / 2 - event.clientY) / 70;
+
+      heroVisual.style.transform =
+        `translate(${x}px, ${y}px)`;
 
     });
 
-  });
+  }
 
 
-  // -------------------------------
-  // Simple Console Message
-  // -------------------------------
+  /* =========================================
+     CONSOLE BRAND MESSAGE
+     ========================================= */
 
   console.log(
-    "Toluwase Victor Portfolio loaded successfully."
+    "%cEsan Toluwase Victor",
+    "font-size:20px;font-weight:bold;color:#4A148C;"
   );
 
   console.log(
-    "Founder • Web Developer • AI & EdTech Builder • Product & Technology Strategist"
+    "Digital Project Manager • Technology & Product Strategist • AI & EdTech Builder"
   );
 
 });
