@@ -1,44 +1,54 @@
-/* =========================================
-   ESAN TOLUWASE VICTOR
-   PORTFOLIO JAVASCRIPT
-   ========================================= */
+/* =========================================================
+   TOLUWASE VICTOR ESAN — PORTFOLIO JAVASCRIPT
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================================
+  /* =======================================================
      MOBILE MENU
-     ========================================= */
+     ======================================================= */
 
   const menuToggle = document.getElementById("menuToggle");
-  const nav = document.getElementById("nav");
+  const navLinks = document.getElementById("navLinks");
 
-  if (menuToggle && nav) {
+  if (menuToggle && navLinks) {
 
     menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("open");
+      navLinks.classList.toggle("open");
       menuToggle.classList.toggle("active");
     });
 
-    nav.querySelectorAll("a").forEach(link => {
+    // Close mobile menu after clicking a navigation link
+    const links = navLinks.querySelectorAll("a");
 
+    links.forEach((link) => {
       link.addEventListener("click", () => {
-        nav.classList.remove("open");
+        navLinks.classList.remove("open");
         menuToggle.classList.remove("active");
       });
-
     });
 
+    // Close menu if user taps outside it
+    document.addEventListener("click", (event) => {
+      const clickedInsideMenu =
+        navLinks.contains(event.target) ||
+        menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu) {
+        navLinks.classList.remove("open");
+        menuToggle.classList.remove("active");
+      }
+    });
   }
 
 
-  /* =========================================
+  /* =======================================================
      HEADER SCROLL EFFECT
-     ========================================= */
+     ======================================================= */
 
-  const header = document.getElementById("header");
+  const header = document.querySelector(".site-header");
 
-  function handleHeader() {
-
+  const updateHeader = () => {
     if (!header) return;
 
     if (window.scrollY > 30) {
@@ -46,31 +56,38 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       header.classList.remove("scrolled");
     }
+  };
 
-  }
+  window.addEventListener("scroll", updateHeader, {
+    passive: true
+  });
 
-  window.addEventListener("scroll", handleHeader);
-
-  handleHeader();
+  updateHeader();
 
 
-  /* =========================================
-     SCROLL REVEAL
-     ========================================= */
+  /* =======================================================
+     SCROLL REVEAL ANIMATIONS
+     ======================================================= */
 
-  const revealElements = document.querySelectorAll(".reveal");
+  const revealElements = document.querySelectorAll(
+    ".section-heading, .about-text, .highlight-card, " +
+    ".timeline-item, .skill-card, .featured-project, " +
+    ".project-card, .education-card, .cert-card, " +
+    ".contact-card"
+  );
+
+  revealElements.forEach((element) => {
+    element.classList.add("reveal");
+  });
 
   const revealObserver = new IntersectionObserver(
-    entries => {
+    (entries, observer) => {
 
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
-
           entry.target.classList.add("visible");
-
-          revealObserver.unobserve(entry.target);
-
+          observer.unobserve(entry.target);
         }
 
       });
@@ -81,107 +98,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-
-  revealElements.forEach(element => {
+  revealElements.forEach((element) => {
     revealObserver.observe(element);
   });
 
 
-  /* =========================================
+  /* =======================================================
      ACTIVE NAVIGATION
-     ========================================= */
+     ======================================================= */
 
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav a");
+  const sections = document.querySelectorAll("main section[id]");
+  const navigationLinks = document.querySelectorAll(".nav-link");
 
-  const sectionObserver = new IntersectionObserver(
-    entries => {
+  const updateActiveNavigation = () => {
 
-      entries.forEach(entry => {
+    let currentSection = "";
 
-        if (!entry.isIntersecting) return;
+    sections.forEach((section) => {
 
-        const currentId = entry.target.getAttribute("id");
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
 
-        navLinks.forEach(link => {
-
-          link.classList.remove("active");
-
-          if (
-            link.getAttribute("href") ===
-            `#${currentId}`
-          ) {
-
-            link.classList.add("active");
-
-          }
-
-        });
-
-      });
-
-    },
-    {
-      rootMargin: "-35% 0px -55% 0px"
-    }
-  );
-
-
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
-
-
-  /* =========================================
-     BACK TO TOP
-     ========================================= */
-
-  const backTop = document.getElementById("backTop");
-
-  function handleBackTop() {
-
-    if (!backTop) return;
-
-    if (window.scrollY > 600) {
-      backTop.classList.add("show");
-    } else {
-      backTop.classList.remove("show");
-    }
-
-  }
-
-  window.addEventListener("scroll", handleBackTop);
-
-  handleBackTop();
-
-
-  if (backTop) {
-
-    backTop.addEventListener("click", () => {
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        currentSection = section.getAttribute("id");
+      }
 
     });
 
+    navigationLinks.forEach((link) => {
+
+      link.classList.remove("active");
+
+      const href = link.getAttribute("href");
+
+      if (href === `#${currentSection}`) {
+        link.classList.add("active");
+      }
+
+    });
+  };
+
+  window.addEventListener("scroll", updateActiveNavigation, {
+    passive: true
+  });
+
+  updateActiveNavigation();
+
+
+  /* =======================================================
+     CURRENT YEAR
+     ======================================================= */
+
+  const currentYear = document.getElementById("currentYear");
+
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
   }
 
 
-  /* =========================================
-     SMOOTH INTERNAL LINKS
-     ========================================= */
+  /* =======================================================
+     SMOOTH SCROLL FOR INTERNAL LINKS
+     ======================================================= */
 
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
+  const internalLinks = document.querySelectorAll(
+    'a[href^="#"]'
+  );
 
-    link.addEventListener("click", event => {
+  internalLinks.forEach((link) => {
+
+    link.addEventListener("click", (event) => {
 
       const targetId = link.getAttribute("href");
 
       if (
         !targetId ||
-        targetId === "#"
+        targetId === "#" ||
+        targetId === "#top"
       ) {
         return;
       }
@@ -202,72 +197,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* =========================================
-     CURRENT YEAR
-     ========================================= */
+  /* =======================================================
+     BUTTON / CARD HOVER DEPTH
+     ======================================================= */
 
-  const year = document.getElementById("year");
+  const interactiveCards = document.querySelectorAll(
+    ".skill-card, .project-card, .cert-card, .highlight-card"
+  );
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+  interactiveCards.forEach((card) => {
 
+    card.addEventListener("mousemove", (event) => {
 
-  /* =========================================
-     EXTERNAL LINKS
-     ========================================= */
+      // Disable effect on small screens
+      if (window.innerWidth < 800) return;
 
-  document.querySelectorAll(
-    'a[target="_blank"]'
-  ).forEach(link => {
+      const rect = card.getBoundingClientRect();
 
-    link.setAttribute(
-      "rel",
-      "noopener noreferrer"
-    );
+      const x =
+        ((event.clientX - rect.left) / rect.width - 0.5) * 4;
+
+      const y =
+        ((event.clientY - rect.top) / rect.height - 0.5) * -4;
+
+      card.style.transform =
+        `translateY(-4px) rotateX(${y}deg) rotateY(${x}deg)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+      card.style.transform = "";
+
+    });
 
   });
 
 
-  /* =========================================
-     SIMPLE MOUSE PARALLAX FOR HERO
-     ========================================= */
+  /* =======================================================
+     YEAR / PAGE READY
+     ======================================================= */
 
-  const heroVisual =
-    document.querySelector(".hero-visual");
-
-  if (
-    heroVisual &&
-    window.matchMedia("(min-width: 1000px)").matches
-  ) {
-
-    document.addEventListener("mousemove", event => {
-
-      const x =
-        (window.innerWidth / 2 - event.clientX) / 70;
-
-      const y =
-        (window.innerHeight / 2 - event.clientY) / 70;
-
-      heroVisual.style.transform =
-        `translate(${x}px, ${y}px)`;
-
-    });
-
-  }
-
-
-  /* =========================================
-     CONSOLE BRAND MESSAGE
-     ========================================= */
-
-  console.log(
-    "%cEsan Toluwase Victor",
-    "font-size:20px;font-weight:bold;color:#4A148C;"
-  );
-
-  console.log(
-    "Digital Project Manager • Technology & Product Strategist • AI & EdTech Builder"
-  );
+  document.body.classList.add("page-loaded");
 
 });
