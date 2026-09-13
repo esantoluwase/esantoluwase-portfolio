@@ -1,667 +1,1460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esan Toluwase Victor | Web Developer, Digital Projects, AI &amp; EdTech</title>
-    <meta name="description" content="Portfolio of Esan Toluwase Victor — Web Developer, Digital Project Professional, AI & EdTech Builder, and Founder building practical digital products across technology, business and strategy." />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Esan Toluwase Victor | Web Developer, Digital Projects, AI & EdTech" />
-    <meta property="og:description" content="Building digital products that turn ideas into useful solutions. Web Developer, Digital Project Professional, AI & EdTech Builder." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://esantoluwase.github.io/esantoluwase-portfolio/" />
-    <meta property="og:image" content="https://esantoluwase.github.io/esantoluwase-portfolio/assets/og-image.jpg" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Esan Toluwase Victor — Front-End Web Developer, Digital Project Professional, AI & EdTech Builder."
+  >
+
+  <meta
+    name="keywords"
+    content="Esan Toluwase Victor, Front-End Developer, Web Developer, JavaScript, HTML, CSS, AI, EdTech, Prova Technologies"
+  >
+
+  <meta name="author" content="Esan Toluwase Victor">
+
+  <meta name="theme-color" content="#5B4BDB">
+
+  <title>Esan Toluwase Victor | Front-End Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- ================= HEADER ================= -->
 
-    <!-- ===== HEADER / NAVIGATION ===== -->
-    <header class="site-header" role="banner">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="#" aria-label="Esan Toluwase Victor Portfolio Home">
-                    <span class="logo-text">Esan<span class="logo-accent">.</span></span>
-                </a>
-            </div>
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
 
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
+      <a href="#home" class="logo" aria-label="Esan Toluwase Victor home">
+        <span class="logo-mark">EV</span>
+        <span class="logo-name">Esan Victor</span>
+      </a>
 
-            <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li><a href="#contact" class="nav-link nav-cta">Let's Connect</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <main id="main-content">
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
 
-        <!-- ===== HERO SECTION ===== -->
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <p class="hero-eyebrow">WEB DEVELOPMENT • DIGITAL PROJECTS • AI • PRODUCT</p>
-                    <h1 id="hero-heading" class="hero-heading">
-                        I build digital products that turn ideas into useful solutions.
-                    </h1>
-                    <p class="hero-text">
-                        I'm Esan Toluwase Victor, a Web Developer, Digital Project Professional, AI &amp; EdTech Builder, and Founder focused on building practical technology products at the intersection of technology, business and strategy.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">Explore My Work <span aria-hidden="true">↗</span></a>
-                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
-                    </div>
-                    <div class="hero-status">
-                        <div class="status-item">
-                            <span class="status-label">Founder &amp; CEO</span>
-                            <span class="status-value">Prova Technologies</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">Focus</span>
-                            <span class="status-value">Technology • Product • AI • Strategy</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">Open to</span>
-                            <span class="status-value">Digital Projects • Web Development • Product Opportunities</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual" aria-hidden="true">
-                    <div class="visual-card">
-                        <div class="visual-initials">EV</div>
-                        <div class="visual-title">Esan Toluwase Victor</div>
-                        <div class="visual-role">Web Developer &amp; Digital Project Professional</div>
-                        <div class="visual-tags">
-                            <span>Web Development</span>
-                            <span>Digital Projects</span>
-                            <span>AI</span>
-                            <span>EdTech</span>
-                            <span>Strategy</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
 
-        <!-- ===== ABOUT SECTION ===== -->
-        <section id="about" class="about" aria-labelledby="about-heading">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <p class="section-eyebrow">About Me</p>
-                        <h2 id="about-heading">Technology with purpose.</h2>
-                        <p>
-                            I am a Computer Science student and technology-focused professional developing experience across web development, digital project management, product development, AI and business strategy.
-                        </p>
-                        <p>
-                            I enjoy working across the full journey of a digital product—from understanding a problem and researching opportunities to planning, building, testing and improving a solution.
-                        </p>
-                        <p>
-                            I'm also the Founder &amp; CEO of <strong>Prova Technologies</strong>, where I'm developing AI-powered EdTech products beginning with IELTS Prova.
-                        </p>
-                        <p>
-                            My goal is to contribute to teams and projects where technology, creativity, organization and business thinking come together to create useful products.
-                        </p>
-                        <div class="about-stats">
-                            <div class="about-stat">
-                                <span class="stat-number">04</span>
-                                <span class="stat-label">Featured Digital Projects</span>
-                            </div>
-                            <div class="about-stat">
-                                <span class="stat-number">03</span>
-                                <span class="stat-label">Professional Certifications</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-capabilities">
-                        <h3>Professional Capabilities</h3>
-                        <div class="capabilities-grid">
-                            <div class="capability-card">
-                                <span class="capability-icon">🌐</span>
-                                <h4>Web Development</h4>
-                                <p>Responsive websites and interactive web applications with modern frontend technologies.</p>
-                                <div class="capability-tags">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                </div>
-                            </div>
-                            <div class="capability-card">
-                                <span class="capability-icon">📋</span>
-                                <h4>Digital Projects</h4>
-                                <p>Planning, organizing and executing technology projects from idea through delivery.</p>
-                                <div class="capability-tags">
-                                    <span>Project Planning</span>
-                                    <span>Workflow</span>
-                                    <span>Product Development</span>
-                                </div>
-                            </div>
-                            <div class="capability-card">
-                                <span class="capability-icon">🤖</span>
-                                <h4>AI &amp; Product</h4>
-                                <p>Exploring practical applications of AI to create useful digital products and learning experiences.</p>
-                                <div class="capability-tags">
-                                    <span>AI</span>
-                                    <span>Product Thinking</span>
-                                    <span>EdTech</span>
-                                </div>
-                            </div>
-                            <div class="capability-card">
-                                <span class="capability-icon">📈</span>
-                                <h4>Business &amp; Growth</h4>
-                                <p>Combining research, digital marketing and business strategy to understand users and identify opportunities.</p>
-                                <div class="capability-tags">
-                                    <span>Digital Marketing</span>
-                                    <span>Research</span>
-                                    <span>Strategy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <a
+          href="https://www.linkedin.com/in/esantoluwasevictor"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-cta"
+        >
+          LinkedIn
+        </a>
 
-        <!-- ===== EXPERIENCE SECTION ===== -->
-        <section id="experience" class="experience" aria-labelledby="experience-heading">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">Experience</p>
-                    <h2 id="experience-heading">Where I've worked and what I've built.</h2>
-                </div>
-                <div class="experience-grid">
-                    <div class="experience-card featured">
-                        <span class="exp-tag">Current</span>
-                        <h3>Founder &amp; CEO</h3>
-                        <p class="exp-company">Prova Technologies</p>
-                        <p class="exp-date">2026 — Present</p>
-                        <p class="exp-description">
-                            Building an emerging EdTech technology venture focused on AI-powered learning products, beginning with IELTS Prova. Responsible for product direction, technology development, research, business strategy, digital growth and project execution.
-                        </p>
-                        <div class="exp-tags">
-                            <span>Founder</span>
-                            <span>Product</span>
-                            <span>AI</span>
-                            <span>EdTech</span>
-                            <span>Strategy</span>
-                        </div>
-                    </div>
+      </nav>
 
-                    <div class="experience-card">
-                        <h3>Computer Operator</h3>
-                        <p class="exp-company">Success Computer</p>
-                        <p class="exp-date">2023 — 2024</p>
-                        <p class="exp-description">
-                            Gained practical experience in computer operations, customer support, document preparation, digital services, data entry and general technology support.
-                        </p>
-                    </div>
-
-                    <div class="experience-card">
-                        <h3>SIWES Intern</h3>
-                        <p class="exp-company">JOTIMM MULTISERVICES</p>
-                        <p class="exp-date">2022 — 2023</p>
-                        <p class="exp-description">
-                            Completed a structured internship gaining hands-on experience in technology operations and business support services.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== PROJECTS SECTION ===== -->
-        <section id="projects" class="projects" aria-labelledby="projects-heading">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">Selected Work</p>
-                    <h2 id="projects-heading">Real products, prototypes and technology projects built to solve practical problems.</h2>
-                </div>
-                <div class="projects-grid">
-                    <!-- Project 1: IELTS Prova -->
-                    <article class="project-card featured">
-                        <div class="project-preview">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #2D1B69, #6C3CE1);">
-                                <span class="placeholder-icon">📚</span>
-                                <span class="placeholder-text">IELTS Prova</span>
-                            </div>
-                            <span class="project-status active">Active Product</span>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>FOUNDER</span>
-                                <span>EDTECH</span>
-                                <span>AI</span>
-                            </div>
-                            <h3>IELTS Prova</h3>
-                            <p>An AI-powered IELTS preparation platform being developed by Prova Technologies to help students practice Reading, Listening, Writing and Speaking through structured learning experiences.</p>
-                            <div class="project-features">
-                                <span>AI Learning</span>
-                                <span>Progress Tracking</span>
-                                <span>IELTS Practice</span>
-                                <span>Product Development</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://esantoluwase.github.io/IELTSPROVA-/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">View Product ↗</a>
-                                <a href="https://github.com/esantoluwase/IELTSPROVA-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">GitHub ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: FlowBoard -->
-                    <article class="project-card">
-                        <div class="project-preview">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #17151F, #5B4BDB);">
-                                <span class="placeholder-icon">📋</span>
-                                <span class="placeholder-text">FlowBoard</span>
-                            </div>
-                            <span class="project-status portfolio">Portfolio Product</span>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>PRODUCT</span>
-                                <span>PROJECT MANAGEMENT</span>
-                                <span>WEB</span>
-                            </div>
-                            <h3>FlowBoard</h3>
-                            <p>A lightweight project-management web application featuring Kanban workflows, task management, filtering, search, project progress tracking and local data persistence.</p>
-                            <div class="project-features">
-                                <span>Kanban</span>
-                                <span>Task Management</span>
-                                <span>Project Tracking</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://esantoluwase.github.io/flowboard/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">View Project ↗</a>
-                                <a href="https://github.com/esantoluwase/flowboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">GitHub ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: InsightAI -->
-                    <article class="project-card">
-                        <div class="project-preview">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #0B0C10, #6C63FF);">
-                                <span class="placeholder-icon">🧠</span>
-                                <span class="placeholder-text">InsightAI</span>
-                            </div>
-                            <span class="project-status portfolio">Portfolio Product</span>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>AI</span>
-                                <span>RESEARCH</span>
-                                <span>PRODUCT</span>
-                            </div>
-                            <h3>InsightAI</h3>
-                            <p>An interactive AI-style business research assistant that transforms business ideas into structured opportunities, customer insights, risks, marketing ideas and action plans.</p>
-                            <div class="project-features">
-                                <span>AI Product</span>
-                                <span>Business Research</span>
-                                <span>Strategy</span>
-                                <span>Interactive Web App</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://esantoluwase.github.io/insightai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">View Project ↗</a>
-                                <a href="https://github.com/esantoluwase/insightai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">GitHub ↗</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4: NexaGrowth -->
-                    <article class="project-card">
-                        <div class="project-preview">
-                            <div class="project-placeholder" style="background: linear-gradient(135deg, #17151F, #6754C7);">
-                                <span class="placeholder-icon">🚀</span>
-                                <span class="placeholder-text">NexaGrowth</span>
-                            </div>
-                            <span class="project-status concept">Portfolio Concept</span>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>WEB</span>
-                                <span>BUSINESS</span>
-                                <span>STRATEGY</span>
-<!-- ===== PROJECTS SECTION ===== -->
-<section id="projects" class="projects" aria-labelledby="projects-heading">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-eyebrow">Selected Work</p>
-            <h2 id="projects-heading">Real products, prototypes and technology projects built to solve practical problems.</h2>
-        </div>
-        <div class="projects-grid">
-            <!-- Project 1: IELTS Prova -->
-            <article class="project-card featured">
-                <div class="project-preview">
-                    <div class="project-placeholder" style="background: linear-gradient(135deg, #2D1B69, #6C3CE1);">
-                        <span class="placeholder-icon">📚</span>
-                        <span class="placeholder-text">IELTS Prova</span>
-                    </div>
-                    <span class="project-status active">Active Product</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-tags">
-                        <span>FOUNDER</span>
-                        <span>EDTECH</span>
-                        <span>AI</span>
-                    </div>
-                    <h3>IELTS Prova</h3>
-                    <p>An AI-powered IELTS preparation platform being developed by Prova Technologies to help students practice Reading, Listening, Writing and Speaking through structured learning experiences.</p>
-                    <div class="project-features">
-                        <span>AI Learning</span>
-                        <span>Progress Tracking</span>
-                        <span>IELTS Practice</span>
-                        <span>Product Development</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://esantoluwase.github.io/IELTSPROVA-/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Live Project ↗</a>
-                        <a href="projects/ielts-prova.html" class="btn btn-secondary btn-small">Case Study →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 2: FlowBoard -->
-            <article class="project-card">
-                <div class="project-preview">
-                    <div class="project-placeholder" style="background: linear-gradient(135deg, #17151F, #5B4BDB);">
-                        <span class="placeholder-icon">📋</span>
-                        <span class="placeholder-text">FlowBoard</span>
-                    </div>
-                    <span class="project-status portfolio">Portfolio Product</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-tags">
-                        <span>PRODUCT</span>
-                        <span>PROJECT MANAGEMENT</span>
-                        <span>WEB</span>
-                    </div>
-                    <h3>FlowBoard</h3>
-                    <p>A lightweight project-management web application featuring Kanban workflows, task management, filtering, search, project progress tracking and local data persistence.</p>
-                    <div class="project-features">
-                        <span>Kanban</span>
-                        <span>Task Management</span>
-                        <span>Project Tracking</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://esantoluwase.github.io/flowboard/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Live Project ↗</a>
-                        <a href="projects/flowboard.html" class="btn btn-secondary btn-small">Case Study →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 3: InsightAI -->
-            <article class="project-card">
-                <div class="project-preview">
-                    <div class="project-placeholder" style="background: linear-gradient(135deg, #0B0C10, #6C63FF);">
-                        <span class="placeholder-icon">🧠</span>
-                        <span class="placeholder-text">InsightAI</span>
-                    </div>
-                    <span class="project-status portfolio">Portfolio Product</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-tags">
-                        <span>AI</span>
-                        <span>RESEARCH</span>
-                        <span>PRODUCT</span>
-                    </div>
-                    <h3>InsightAI</h3>
-                    <p>An interactive AI-style business research assistant that transforms business ideas into structured opportunities, customer insights, risks, marketing ideas and action plans.</p>
-                    <div class="project-features">
-                        <span>AI Product</span>
-                        <span>Business Research</span>
-                        <span>Strategy</span>
-                        <span>Interactive Web App</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://esantoluwase.github.io/insightai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Live Project ↗</a>
-                        <a href="projects/insightai.html" class="btn btn-secondary btn-small">Case Study →</a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project 4: NexaGrowth -->
-            <article class="project-card">
-                <div class="project-preview">
-                    <div class="project-placeholder" style="background: linear-gradient(135deg, #17151F, #6754C7);">
-                        <span class="placeholder-icon">🚀</span>
-                        <span class="placeholder-text">NexaGrowth</span>
-                    </div>
-                    <span class="project-status concept">Portfolio Concept</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-tags">
-                        <span>WEB</span>
-                        <span>BUSINESS</span>
-                        <span>STRATEGY</span>
-                    </div>
-                    <h3>NexaGrowth</h3>
-                    <p>A digital growth and technology studio concept demonstrating web development, digital marketing, business strategy, research and technology strategy.</p>
-                    <div class="project-features">
-                        <span>Web Development</span>
-                        <span>Digital Marketing</span>
-                        <span>Business Strategy</span>
-                        <span>Technology Strategy</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://esantoluwase.github.io/nexagrowth/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">Live Project ↗</a>
-                        <a href="projects/nexagrowth.html" class="btn btn-secondary btn-small">Case Study →</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- Academic Project -->
-        <div class="academic-section">
-            <h3>Academic Work</h3>
-            <div class="academic-card">
-                <div class="academic-content">
-                    <h4>Online Court of Law Case Scheduling System</h4>
-                    <p>A proposed web-based system designed to improve the organization and scheduling of court cases through a centralized digital platform.</p>
-                    <div class="academic-tags">
-                        <span>Web Development</span>
-                        <span>Database</span>
-                        <span>Research</span>
-                    </div>
-                    <span class="academic-badge">Academic Project</span>
-                </div>
-            </div>
-        </div>
     </div>
-                            </section>
+  </header>
 
-                <!-- Academic Project -->
-                <div class="academic-section">
-                    <h3>Academic Work</h3>
-                    <div class="academic-card">
-                        <div class="academic-content">
-                            <h4>Online Court of Law Case Scheduling System</h4>
-                            <p>A proposed web-based system designed to improve the organization and scheduling of court cases through a centralized digital platform.</p>
-                            <div class="academic-tags">
-                                <span>Web Development</span>
-                                <span>Database</span>
-                                <span>Research</span>
-                            </div>
-                            <span class="academic-badge">Academic Project</span>
-                        </div>
-                    </div>
-                </div>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero section" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <p class="eyebrow">
+            FRONT-END DEVELOPMENT • DIGITAL PROJECTS • AI & EDTECH
+          </p>
+
+          <h1>
+            I build clean, useful digital experiences.
+          </h1>
+
+          <p class="hero-text">
+            I'm Esan Toluwase Victor, a Computer Science student and
+            Front-End Web Developer focused on building responsive websites,
+            practical web applications and digital products.
+          </p>
+
+          <p class="hero-text secondary">
+            I also build at the intersection of technology, product thinking,
+            AI and education through projects and my startup, Prova Technologies.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#projects" class="btn btn-primary">
+              View My Work
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              Let's Connect
+            </a>
+
+          </div>
+
+          <div class="hero-meta">
+
+            <div class="meta-item">
+              <span class="meta-label">Currently</span>
+              <strong>Founder & Builder at Prova Technologies</strong>
             </div>
-        </section>
 
-        <!-- ===== FOUNDER SECTION ===== -->
-        <section id="founder" class="founder" aria-labelledby="founder-heading">
-            <div class="container">
-                <div class="founder-content">
-                    <p class="section-eyebrow">Building Prova Technologies</p>
-                    <h2 id="founder-heading">Building technology for better learning.</h2>
-                    <p>Prova Technologies is an emerging technology venture focused on building AI-powered education products.</p>
-                    <p>IELTS Prova is the company's first product, designed around structured IELTS preparation and future AI-powered learning experiences.</p>
-                    <a href="https://esantoluwase.github.io/IELTSPROVA-/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Explore Prova <span aria-hidden="true">↗</span></a>
-                </div>
+            <div class="meta-item">
+              <span class="meta-label">Focus</span>
+              <strong>Web Development • Digital Products • AI</strong>
             </div>
-        </section>
 
-        <!-- ===== SKILLS SECTION ===== -->
-        <section id="skills" class="skills" aria-labelledby="skills-heading">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">Skills</p>
-                    <h2 id="skills-heading">Technologies, tools and professional capabilities.</h2>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Development</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>C/C++</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>GitHub</li>
-                            <li>Microsoft Excel</li>
-                            <li>Microsoft Word</li>
-                            <li>CorelDRAW</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Project &amp; Product</h3>
-                        <ul>
-                            <li>Project Management</li>
-                            <li>Product Development</li>
-                            <li>Research</li>
-                            <li>Problem Solving</li>
-                            <li>Teamwork</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Business &amp; Strategy</h3>
-                        <ul>
-                            <li>Digital Marketing</li>
-                            <li>Business Strategy</li>
-                            <li>Market Research</li>
-                            <li>Technology Strategy</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>AI &amp; EdTech</h3>
-                        <ul>
-                            <li>Artificial Intelligence</li>
-                            <li>AI Product Thinking</li>
-                            <li>EdTech</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="meta-item">
+              <span class="meta-label">Open to</span>
+              <strong>Front-End • Web • Digital Project Opportunities</strong>
             </div>
-        </section>
 
-        <!-- ===== CERTIFICATIONS SECTION ===== -->
-        <section id="certifications" class="certifications" aria-labelledby="cert-heading">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">Certifications</p>
-                    <h2 id="cert-heading">Professional certifications and credentials.</h2>
-                </div>
-                <div class="certs-grid">
-                    <div class="cert-card">
-                        <span class="cert-icon">🎯</span>
-                        <h3>Google Ads</h3>
-                        <p class="cert-subtitle">AI-Powered Performance Ads</p>
-                        <p>Google Ads certification focused on AI-powered performance advertising and campaign optimization.</p>
-                        <!-- No public URL available -->
-                    </div>
-                    <div class="cert-card">
-                        <span class="cert-icon">📊</span>
-                        <h3>HubSpot</h3>
-                        <p class="cert-subtitle">Digital Marketing Certification</p>
-                        <p>HubSpot certification covering digital marketing concepts, strategy and modern marketing practices.</p>
-                        <!-- No public URL available -->
-                    </div>
-                    <div class="cert-card">
-                        <span class="cert-icon">🧠</span>
-                        <h3>IBM</h3>
-                        <p class="cert-subtitle">AI Fundamentals</p>
-                        <p>IBM AI fundamentals certification covering foundational concepts and understanding of artificial intelligence.</p>
-                        <!-- No public URL available -->
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
 
-        <!-- ===== EDUCATION SECTION ===== -->
-        <section id="education" class="education" aria-labelledby="education-heading">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-eyebrow">Education</p>
-                    <h2 id="education-heading">Learning and academic background.</h2>
-                </div>
-                <div class="education-card">
-                    <h3>Federal Polytechnic Ede</h3>
-                    <p class="edu-degree">National Diploma — Computer Science</p>
-                    <p class="edu-school">School of Computing Technology</p>
-                    <p class="edu-description">Developing knowledge across software development, programming, databases, web technologies, computer systems and information technology.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== CONTACT SECTION ===== -->
-        <section id="contact" class="contact" aria-labelledby="contact-heading">
-            <div class="container">
-                <div class="contact-content">
-                    <p class="section-eyebrow">Get in Touch</p>
-                    <h2 id="contact-heading">Have a project, opportunity or idea?</h2>
-                    <p>I'm open to opportunities involving web development, digital project management, product development, AI, technology strategy, digital marketing and business-focused technology.</p>
-                    <div class="contact-links">
-                        <a href="mailto:esantolu604@gmail.com" class="btn btn-primary btn-large">Email Me</a>
-                        <a href="https://www.linkedin.com/in/esan-toluwase-victor-aa7307339/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">LinkedIn</a>
-                        <a href="https://github.com/esantoluwase" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">GitHub</a>
-                    </div>
-                    <p class="contact-email">esantolu604@gmail.com</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-container">
-            <p>&copy; 2026 Esan Toluwase Victor</p>
-            <p class="footer-tagline">Web Developer · Digital Projects · AI &amp; EdTech</p>
-            <div class="footer-links">
-                <a href="https://github.com/esantoluwase" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/esan-toluwase-victor-aa7307339/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:esantolu604@gmail.com">Email</a>
-            </div>
         </div>
-    </footer>
 
-    <script src="script.js" defer></script>
+
+        <div class="hero-visual reveal">
+
+          <div class="developer-card">
+
+            <div class="card-top">
+
+              <span class="status-dot"></span>
+
+              <span>
+                Available for opportunities
+              </span>
+
+            </div>
+
+            <div class="profile-symbol">
+              EV
+            </div>
+
+            <h2>
+              Web Developer
+            </h2>
+
+            <p>
+              Building practical websites, interfaces and digital products
+              with a focus on usability and clean implementation.
+            </p>
+
+            <div class="tech-tags">
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Git</span>
+              <span>AI</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about-section" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="section-label">
+            ABOUT ME
+          </p>
+
+          <h2>
+            Technology with purpose.
+          </h2>
+
+          <p>
+            I enjoy taking an idea and turning it into something people can
+            actually use.
+          </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-text reveal">
+
+            <p>
+              I'm a Computer Science student at Federal Polytechnic Ede,
+              currently completing my ND programme while building my practical
+              experience in web development and digital technology.
+            </p>
+
+            <p>
+              My main interest is front-end and web development, where I work
+              with HTML, CSS and JavaScript to create responsive and useful
+              interfaces. I also have experience with Python, Java, C/C++,
+              MySQL and other development tools.
+            </p>
+
+            <p>
+              Beyond coding, I enjoy understanding the problem behind a
+              product — what users need, how the experience should work and
+              how technology can turn an idea into a useful solution.
+            </p>
+
+            <p>
+              I'm also the founder and builder of Prova Technologies, where
+              I'm developing AI-powered education products beginning with
+              IELTSProva.
+            </p>
+
+          </div>
+
+
+          <div class="about-highlights reveal">
+
+            <div class="highlight-card">
+
+              <span class="highlight-number">
+                05
+              </span>
+
+              <span class="highlight-text">
+                Professional Certifications
+              </span>
+
+            </div>
+
+
+            <div class="highlight-card">
+
+              <span class="highlight-number">
+                04
+              </span>
+
+              <span class="highlight-text">
+                Featured Portfolio Projects
+              </span>
+
+            </div>
+
+
+            <div class="highlight-card">
+
+              <span class="highlight-number">
+                01
+              </span>
+
+              <span class="highlight-text">
+                Startup I'm Building
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="capabilities-grid">
+
+          <article class="capability-card reveal">
+
+            <div class="capability-icon">
+              01
+            </div>
+
+            <h3>
+              Web Development
+            </h3>
+
+            <p>
+              Responsive websites and web interfaces built with clean,
+              practical front-end technologies.
+            </p>
+
+          </article>
+
+
+          <article class="capability-card reveal">
+
+            <div class="capability-icon">
+              02
+            </div>
+
+            <h3>
+              Digital Projects
+            </h3>
+
+            <p>
+              Turning requirements and ideas into structured digital
+              experiences and usable products.
+            </p>
+
+          </article>
+
+
+          <article class="capability-card reveal">
+
+            <div class="capability-icon">
+              03
+            </div>
+
+            <h3>
+              AI & EdTech
+            </h3>
+
+            <p>
+              Exploring practical ways to use AI to improve learning,
+              productivity and digital experiences.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section class="section experience-section" id="experience">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="section-label">
+            EXPERIENCE
+          </p>
+
+          <h2>
+            What I've worked on.
+          </h2>
+
+          <p>
+            My experience combines practical computer work, web projects,
+            startup building and digital technology.
+          </p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+          <!-- PROVA -->
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              2026 — Present
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-title-row">
+
+                <div>
+
+                  <h3>
+                    Founder & CEO — Prova Technologies
+                  </h3>
+
+                  <p class="experience-company">
+                    AI & EdTech
+                  </p>
+
+                </div>
+
+                <span class="experience-badge">
+                  Founder
+                </span>
+
+              </div>
+
+              <p>
+                Building Prova Technologies and its first product,
+                IELTSProva — an AI-powered IELTS preparation platform
+                designed to help candidates practise, improve and track
+                their progress.
+              </p>
+
+              <div class="experience-tags">
+
+                <span>Product Development</span>
+                <span>AI</span>
+                <span>EdTech</span>
+                <span>Web Development</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- OLANES -->
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              Website Project
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-title-row">
+
+                <div>
+
+                  <h3>
+                    OLANES Global Export Ltd — Website Project
+                  </h3>
+
+                  <p class="experience-company">
+                    Web Development
+                  </p>
+
+                </div>
+
+                <span class="experience-badge">
+                  Project
+                </span>
+
+              </div>
+
+              <p>
+                Worked on the website for OLANES Global Export Ltd,
+                creating a professional digital presence for an export
+                business and presenting its products and services online.
+              </p>
+
+              <div class="experience-tags">
+
+                <span>Website Development</span>
+                <span>Responsive Design</span>
+                <span>Business Website</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- SUCCESS COMPUTER -->
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              2023 — 2024
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-title-row">
+
+                <div>
+
+                  <h3>
+                    Computer Operator / Computer Services Assistant
+                  </h3>
+
+                  <p class="experience-company">
+                    Success Computer
+                  </p>
+
+                </div>
+
+                <span class="experience-badge">
+                  Experience
+                </span>
+
+              </div>
+
+              <p>
+                Provided computer-related services, assisted customers with
+                everyday digital tasks and worked with common office and
+                computer applications.
+              </p>
+
+              <div class="experience-tags">
+
+                <span>Computer Operations</span>
+                <span>Microsoft Word</span>
+                <span>Excel</span>
+                <span>Customer Support</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- JOTIMM -->
+
+          <article class="experience-item reveal">
+
+            <div class="experience-date">
+              2022 — 2023
+            </div>
+
+            <div class="experience-content">
+
+              <div class="experience-title-row">
+
+                <div>
+
+                  <h3>
+                    SIWES Intern
+                  </h3>
+
+                  <p class="experience-company">
+                    JOTIMM MULTISERVICES
+                  </p>
+
+                </div>
+
+                <span class="experience-badge">
+                  Internship
+                </span>
+
+              </div>
+
+              <p>
+                Gained practical experience working with computers,
+                digital tools and day-to-day technology tasks in a
+                professional environment.
+              </p>
+
+              <div class="experience-tags">
+
+                <span>IT Support</span>
+                <span>Digital Tools</span>
+                <span>Computer Skills</span>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="section projects-section" id="projects">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="section-label">
+            SELECTED WORK
+          </p>
+
+          <h2>
+            Projects I've built.
+          </h2>
+
+          <p>
+            A mix of web development, AI concepts, digital products and
+            practical product-building work.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- IELTS PROVA -->
+
+          <article class="project-card project-featured reveal">
+
+            <div class="project-visual prova-visual">
+
+              <span class="project-number">
+                01
+              </span>
+
+              <span class="project-type">
+                STARTUP PRODUCT
+              </span>
+
+              <div class="project-visual-title">
+                IELTSProva
+              </div>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <div class="project-top">
+
+                <span class="project-status active">
+                  Active Product
+                </span>
+
+              </div>
+
+              <h3>
+                IELTSProva
+              </h3>
+
+              <p>
+                An AI-powered IELTS preparation platform designed around
+                Reading, Listening, Writing and Speaking practice, with
+                AI feedback, progress tracking and adaptive learning.
+              </p>
+
+              <div class="project-tags">
+
+                <span>AI</span>
+                <span>EdTech</span>
+                <span>Web App</span>
+                <span>Product</span>
+
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://ieltsprova.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  View Product →
+                </a>
+
+                <a
+                  href="https://esantoluwase.github.io/IELTSPROVA-/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  Project Site →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- FLOWBOARD -->
+
+          <article class="project-card reveal">
+
+            <div class="project-visual flowboard-visual">
+
+              <span class="project-number">
+                02
+              </span>
+
+              <span class="project-type">
+                PORTFOLIO PRODUCT
+              </span>
+
+              <div class="project-visual-title">
+                FlowBoard
+              </div>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="project-status">
+                Portfolio Product
+              </span>
+
+              <h3>
+                FlowBoard
+              </h3>
+
+              <p>
+                A workflow and task-management web application concept
+                focused on organising work, tasks and team collaboration.
+              </p>
+
+              <div class="project-tags">
+
+                <span>Web App</span>
+                <span>UI/UX</span>
+                <span>Product Thinking</span>
+
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://esantoluwase.github.io/flowboard/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  View Project →
+                </a>
+
+                <a
+                  href="projects/flowboard.html"
+                  class="text-link"
+                >
+                  Case Study →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- INSIGHT AI -->
+
+          <article class="project-card reveal">
+
+            <div class="project-visual insight-visual">
+
+              <span class="project-number">
+                03
+              </span>
+
+              <span class="project-type">
+                PORTFOLIO PRODUCT
+              </span>
+
+              <div class="project-visual-title">
+                InsightAI
+              </div>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="project-status">
+                Portfolio Product
+              </span>
+
+              <h3>
+                InsightAI
+              </h3>
+
+              <p>
+                An AI-style business research assistant concept designed
+                to help users explore information and turn research into
+                useful insights.
+              </p>
+
+              <div class="project-tags">
+
+                <span>AI</span>
+                <span>Research</span>
+                <span>Web</span>
+
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://esantoluwase.github.io/insightai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  View Project →
+                </a>
+
+                <a
+                  href="projects/insightai.html"
+                  class="text-link"
+                >
+                  Case Study →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- NEXAGROWTH -->
+
+          <article class="project-card reveal">
+
+            <div class="project-visual nexagrowth-visual">
+
+              <span class="project-number">
+                04
+              </span>
+
+              <span class="project-type">
+                PORTFOLIO CONCEPT
+              </span>
+
+              <div class="project-visual-title">
+                NexaGrowth
+              </div>
+
+            </div>
+
+
+            <div class="project-body">
+
+              <span class="project-status">
+                Portfolio Concept
+              </span>
+
+              <h3>
+                NexaGrowth
+              </h3>
+
+              <p>
+                A digital business and growth concept focused on helping
+                businesses think about their online presence, strategy
+                and growth.
+              </p>
+
+              <div class="project-tags">
+
+                <span>Web</span>
+                <span>Business</span>
+                <span>Strategy</span>
+
+              </div>
+
+              <div class="project-links">
+
+                <a
+                  href="https://esantoluwase.github.io/nexagrowth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-link"
+                >
+                  View Project →
+                </a>
+
+                <a
+                  href="projects/nexagrowth.html"
+                  class="text-link"
+                >
+                  Case Study →
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ACADEMIC WORK ================= -->
+
+    <section class="section academic-section">
+
+      <div class="container">
+
+        <div class="academic-card reveal">
+
+          <div class="academic-content">
+
+            <p class="section-label">
+              ACADEMIC WORK
+            </p>
+
+            <h2>
+              Online Court of Law Case Scheduling System
+            </h2>
+
+            <p>
+              A Computer Science project focused on designing and
+              implementing a digital system for managing and scheduling
+              court cases.
+            </p>
+
+            <div class="project-tags">
+
+              <span>Computer Science</span>
+              <span>System Design</span>
+              <span>Web Development</span>
+
+            </div>
+
+          </div>
+
+          <div class="academic-badge">
+            CS PROJECT
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FOUNDER ================= -->
+
+    <section class="section founder-section">
+
+      <div class="container">
+
+        <div class="founder-card reveal">
+
+          <div>
+
+            <p class="section-label">
+              BUILDING SOMETHING OF MY OWN
+            </p>
+
+            <h2>
+              Prova Technologies
+            </h2>
+
+            <p>
+              I'm building Prova Technologies around a simple idea:
+              technology should make learning more practical, accessible
+              and useful.
+            </p>
+
+            <p>
+              IELTSProva is the first product, with plans to expand into
+              more AI-powered education and assessment products.
+            </p>
+
+          </div>
+
+          <a
+            href="https://ieltsprova.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-light"
+          >
+            Explore Prova
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section skills-section" id="skills">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="section-label">
+            SKILLS
+          </p>
+
+          <h2>
+            Tools I work with.
+          </h2>
+
+          <p>
+            My current technical and professional skill set, with continued
+            learning in modern web development.
+          </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <div class="skills-group reveal">
+
+            <h3>
+              Development
+            </h3>
+
+            <div class="skill-list">
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>Java</span>
+              <span>C</span>
+              <span>C++</span>
+              <span>MySQL</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skills-group reveal">
+
+            <h3>
+              Tools
+            </h3>
+
+            <div class="skill-list">
+
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Microsoft Word</span>
+              <span>Excel</span>
+              <span>CorelDRAW</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skills-group reveal">
+
+            <h3>
+              Project & Product
+            </h3>
+
+            <div class="skill-list">
+
+              <span>Project Planning</span>
+              <span>Requirements</span>
+              <span>Product Thinking</span>
+              <span>UX Thinking</span>
+              <span>Problem Solving</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skills-group reveal">
+
+            <h3>
+              AI & EdTech
+            </h3>
+
+            <div class="skill-list">
+
+              <span>AI Product Concepts</span>
+              <span>EdTech</span>
+              <span>AI-assisted Development</span>
+              <span>Digital Learning</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section class="section certifications-section" id="certifications">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <p class="section-label">
+            CERTIFICATIONS
+          </p>
+
+          <h2>
+            Learning beyond the classroom.
+          </h2>
+
+          <p>
+            Professional learning that supports my technical, project and
+            digital skills.
+          </p>
+
+        </div>
+
+
+        <div class="certifications-grid">
+
+
+          <article class="cert-card reveal">
+
+            <span class="cert-number">
+              01
+            </span>
+
+            <h3>
+              IBM SkillsBuild — Web Development Fundamentals
+            </h3>
+
+            <p>
+              IBM SkillsBuild
+            </p>
+
+          </article>
+
+
+          <article class="cert-card reveal">
+
+            <span class="cert-number">
+              02
+            </span>
+
+            <h3>
+              IBM Project Management Fundamentals
+            </h3>
+
+            <p>
+              IBM
+            </p>
+
+          </article>
+
+
+          <article class="cert-card reveal">
+
+            <span class="cert-number">
+              03
+            </span>
+
+            <h3>
+              Google AI-Powered Performance Ads
+            </h3>
+
+            <p>
+              Google
+            </p>
+
+          </article>
+
+
+          <article class="cert-card reveal">
+
+            <span class="cert-number">
+              04
+            </span>
+
+            <h3>
+              Digital Marketing Certification
+            </h3>
+
+            <p>
+              HubSpot Academy
+            </p>
+
+          </article>
+
+
+          <article class="cert-card reveal">
+
+            <span class="cert-number">
+              05
+            </span>
+
+            <h3>
+              IBM AI Fundamentals: Foundations for Understanding AI
+            </h3>
+
+            <p>
+              IBM
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section class="section education-section">
+
+      <div class="container">
+
+        <div class="education-card reveal">
+
+          <div>
+
+            <p class="section-label">
+              EDUCATION
+            </p>
+
+            <h2>
+              Federal Polytechnic Ede
+            </h2>
+
+            <p class="education-course">
+              National Diploma — Computer Science
+            </p>
+
+            <p>
+              School of Computing Technology
+            </p>
+
+          </div>
+
+
+          <div class="education-details">
+
+            <div>
+              <span>
+                Current Stage
+              </span>
+
+              <strong>
+                Final Semester
+              </strong>
+            </div>
+
+            <div>
+              <span>
+                CGPA
+              </span>
+
+              <strong>
+                2.91 / 4.00
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact-section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-card reveal">
+
+          <div class="contact-content">
+
+            <p class="section-label">
+              GET IN TOUCH
+            </p>
+
+            <h2>
+              Let's build something useful.
+            </h2>
+
+            <p>
+              I'm open to front-end development opportunities, website
+              projects, digital technology work and conversations around
+              building useful products.
+            </p>
+
+          </div>
+
+
+          <div class="contact-actions">
+
+            <a
+              href="mailto:esantolu604@gmail.com"
+              class="contact-link"
+            >
+              <span class="contact-icon">
+                @
+              </span>
+
+              <span>
+                <small>Email</small>
+                <strong>
+                  esantolu604@gmail.com
+                </strong>
+              </span>
+            </a>
+
+
+            <a
+              href="https://wa.me/2348137240707"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span class="contact-icon">
+                WA
+              </span>
+
+              <span>
+                <small>WhatsApp</small>
+                <strong>
+                  Message me directly
+                </strong>
+              </span>
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/esantoluwasevictor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span class="contact-icon">
+                in
+              </span>
+
+              <span>
+                <small>LinkedIn</small>
+                <strong>
+                  Connect with me
+                </strong>
+              </span>
+            </a>
+
+
+            <a
+              href="https://github.com/esantoluwase"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+            >
+              <span class="contact-icon">
+                GH
+              </span>
+
+              <span>
+                <small>GitHub</small>
+                <strong>
+                  View my code
+                </strong>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-container">
+
+      <div>
+
+        <strong>
+          Esan Toluwase Victor
+        </strong>
+
+        <p>
+          Front-End Web Developer • Digital Projects • AI & EdTech
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a
+          href="https://github.com/esantoluwase"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/esantoluwasevictor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="mailto:esantolu604@gmail.com">
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="current-year"></span> Esan Toluwase Victor. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
 </body>
-                      </html>
+    </html>
